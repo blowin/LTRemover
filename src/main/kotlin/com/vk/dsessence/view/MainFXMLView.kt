@@ -162,7 +162,7 @@ class MainFXMLView : View("My View") {
                 File(path).walk().forEach {
                     async {
                         if (checkFunc(it) && checkDeleteFunc(it.path)) {
-                            it.delete()
+                            it.deleteRecursively()
                         }
                     }
                 }
