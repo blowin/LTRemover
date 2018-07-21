@@ -1,0 +1,37 @@
+// голубой на кнопках rgba(47, 172, 178, 0.75)
+
+.root {
+	-fx-font-size: 14px;
+}
+
+.jfx-button {
+     -jfx-button-type: RAISED;
+     -fx-background-color: rgba(47, 172, 178, 0.75);
+     -fx-text-fill: white;
+	 -fx-pref-width: 90px;
+}
+
+.jfx-check-box {
+     -jfx-checked-color: #2dbe60;
+     -fx-pref-width: 90px;
+}
+
+.jfx-check-box .mark{
+     -fx-border-color: white;
+}
+
+.toggle-button {
+    -fx-border-color: #525e61;
+}
+
+.combo-box{
+    -fx-background-color: rgba(47, 172, 178, 0.9);
+}
+
+.combo-box .cell{
+    -fx-text-fill: white;
+}
+
+.combo-box .combo-box-popup .list-view, .combo-box .combo-box-popup .list-cell {
+    -fx-background-color: rgba(123, 134, 138, 0.37);
+}

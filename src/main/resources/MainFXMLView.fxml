@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="198.0" minWidth="450.0" prefHeight="198.0" prefWidth="538.0" style="-fx-background-color: #eff2f3;" stylesheets="@style/common.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER_RIGHT" style="-fx-background-color: #d7dcdd;">
+         <children>
+            <JFXComboBox fx:id="langBox" labelFloat="true" prefHeight="30.0" prefWidth="89.0">
+               <VBox.margin>
+                  <Insets right="20.0" top="10.0" />
+               </VBox.margin>
+            </JFXComboBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="314.0" spacing="30.0">
+               <children>
+                  <Label fx:id="deleteLabel" text="Deleted data:">
+                     <padding>
+                        <Insets left="7.0" />
+                     </padding>
+                     <effect>
+                        <Lighting diffuseConstant="2.0" specularConstant="0.93" specularExponent="10.7" surfaceScale="0.0">
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </Label>
+                  <JFXCheckBox fx:id="checkDir" focusTraversable="false" text="Dir" />
+                  <JFXCheckBox fx:id="checkFile" focusTraversable="false" selected="true" text="File" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <effect>
+            <InnerShadow blurType="GAUSSIAN" height="15.07" radius="3.2675" width="0.0" />
+         </effect>
+      </VBox>
+      <StackPane fx:id="stackPane" />
+      <HBox style="-fx-background-color: #d7dcdd;" VBox.vgrow="ALWAYS">
+         <children>
+            <JFXComboBox fx:id="deleteDeleteTypeBox">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </JFXComboBox>
+            <JFXTextField fx:id="fieldDelete" HBox.hgrow="ALWAYS" />
+            <JFXButton fx:id="buttDelete" alignment="CENTER" buttonType="RAISED" ripplerFill="#43b6f8" text="Delete" textAlignment="CENTER" HBox.hgrow="SOMETIMES" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox fillHeight="false" style="-fx-background-color: #aeb6b8;">
+         <children>
+            <JFXTextField fx:id="fieldBrowse" editable="false" HBox.hgrow="ALWAYS" />
+            <JFXButton fx:id="buttBrowse" alignment="CENTER" buttonType="RAISED" ripplerFill="#3bbefb" text="Browse">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" height="9.14" radius="1.7850000000000001" width="0.0" />
+         </effect>
+      </HBox>
+   </children>
+</VBox>
